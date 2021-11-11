@@ -1,0 +1,291 @@
+header {
+  background: url("../images/header/head_back.svg") center center no-repeat;
+  width: 100%;
+  .header_wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    .logo_main {
+      padding: 18px 0 44px 0;
+    }
+    .top_header_info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: flex-end;
+      height: 100%;
+      align-items: center;
+      .header_phone {
+        a {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24px;
+          padding-left: 26px;
+          position: relative;
+        }
+        a:before {
+          content: "";
+          position: absolute;
+          background: url("../images/header/phone_icon.svg") center center
+            no-repeat;
+          width: 18px;
+          height: 18px;
+          left: 0;
+          top: 15%;
+        }
+      }
+      .header_lang {
+        position: relative;
+        padding-left: 26px;
+
+        select {
+          background: transparent;
+          border: none;
+          color: $light_color;
+          font-size: 14px;
+          font-weight: 500;
+          padding-right: 10px;
+          option {
+            background: transparent;
+          }
+        }
+      }
+      .header_lang:before {
+        content: "";
+        position: absolute;
+        background: url("../images/header/lang_icon.svg") center center
+          no-repeat;
+        width: 18px;
+        height: 18px;
+        left: 0;
+        top: 5%;
+      }
+      .header_basket {
+        background: url("../images/header/back_basket.svg") center center
+          no-repeat;
+        width: 207px;
+        height: 49px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+          padding-left: 30px;
+          position: relative;
+        }
+        a:before {
+          content: "";
+          position: absolute;
+          background: url("../images/header/shop_basket_head.svg") center center
+            no-repeat;
+          width: 20px;
+          height: 18px;
+          left: 0;
+          top: -35%;
+        }
+        a:after {
+          content: "2";
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          background: $light_color;
+          color: #222222;
+          font-size: 12px;
+          border-radius: 50%;
+          left: 15%;
+          top: -80%;
+          padding-left: 4px;
+          padding-top: 2px;
+        }
+      }
+    }
+  }
+}
+
+.ham_btn_mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    .header_wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      .logo_main {
+        img {
+          max-width: 230px;
+        }
+      }
+      .top_header_info {
+        margin-top: -15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  header {
+    .header_wrapper {
+      max-width: 768px;
+      margin: 0 auto;
+      .logo_main {
+        img {
+          max-width: 170px;
+        }
+      }
+      .top_header_info {
+        margin-top: -15px;
+        .header_phone {
+          a {
+            font-size: 16px;
+            padding-left: 20px;
+          }
+          a:before {
+            width: 12px;
+            height: 12px;
+            background-size: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    .header_wrapper {
+      max-width: 576px;
+      margin: 0 auto;
+      .logo_main {
+        img {
+          max-width: 130px;
+        }
+      }
+      .top_header_info {
+        margin-top: -15px;
+        margin-left: 40px;
+        .header_phone {
+          a {
+            font-size: 12px;
+            padding-left: 15px;
+          }
+          a:before {
+            width: 12px;
+            height: 12px;
+            background-size: contain;
+          }
+        }
+        .header_lang {
+          padding-left: 20px;
+          select {
+            font-size: 10px;
+          }
+        }
+        .header_basket {
+          width: 150px;
+          background-size: contain;
+          a {
+            font-size: 10px;
+            padding-left: 30px;
+          }
+          a:before {
+            width: 16px;
+            height: 16px;
+            background-size: contain;
+          }
+          a:after {
+            font-size: 8px;
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  header {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    max-height: 72px;
+    .header_wrapper {
+      max-width: 480px;
+      .logo_main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .ham_btn_mobile {
+          display: flex;
+          button {
+            background: url("../images/header/ham.svg") center center no-repeat;
+            background-size: contain;
+            width: 30px;
+            height: 20px;
+            border: none;
+            outline: none;
+          }
+        }
+        img {
+          max-width: 230px;
+        }
+      }
+      .top_header_info {
+        .header_phone {
+          display: none;
+        }
+        .header_lang {
+          display: none;
+        }
+        .header_basket {
+          background: none;
+          position: relative;
+          top: -12%;
+          a {
+            p {
+              display: none;
+            }
+          }
+          a:before {
+            width: 30px;
+            height: 25px;
+          }
+          a:after {
+            font-size: 14px;
+            text-align: inherit;
+            width: 18px;
+            height: 20px;
+            left: 85%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    .header_wrapper {
+      max-width: 375px;
+      .logo_main {
+        img {
+          width: 180px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header {
+    .header_wrapper {
+      max-width: 320px;
+      .col-8 {
+        width: 75%;
+      }
+      .col-4 {
+        width: 25%;
+      }
+    }
+  }
+}
